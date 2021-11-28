@@ -2,17 +2,17 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>AdventOfCode2021</Name>
-    <RootNamespace>AdventOfCode2021</RootNamespace>
+    <Name>solutionRunner</Name>
+    <RootNamespace>solutionRunner</RootNamespace>
     <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>6c31d2a6-f436-421e-8f76-1e2661d3c522</ProjectGuid>
+    <ProjectGuid>c47ba634-3e14-4df6-8cc2-83870cc97afa</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>bin/app.ts</StartupFile>
+    <StartupFile>bin/app</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -32,9 +32,26 @@
   <ItemGroup>
     <None Include="app.ts" />
     <Content Include=".gitignore" />
+    <Content Include="inputs\day01.json" />
+    <Content Include="LICENSE" />
+    <Content Include="package-lock.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="tsconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="inputs\" />
+    <Folder Include="solutions\" />
+    <Folder Include="utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="solutions\day01.ts" />
+    <TypeScriptCompile Include="solutions\index.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="solutions\solution.ts" />
+    <TypeScriptCompile Include="utils\enums.ts" />
+    <TypeScriptCompile Include="utils\params.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
