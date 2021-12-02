@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "solutionRunner", "solutionRunner\solutionRunner.njsproj", "{C47BA634-3E14-4DF6-8CC2-83870CC97AFA}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "inputCleaner", "inputCleaner\inputCleaner.pyproj", "{5B1B7478-ECC6-4FEB-B557-2ADA6040DA4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{C47BA634-3E14-4DF6-8CC2-83870CC97AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C47BA634-3E14-4DF6-8CC2-83870CC97AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C47BA634-3E14-4DF6-8CC2-83870CC97AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B1B7478-ECC6-4FEB-B557-2ADA6040DA4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B1B7478-ECC6-4FEB-B557-2ADA6040DA4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
