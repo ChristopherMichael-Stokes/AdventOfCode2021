@@ -39,6 +39,9 @@
     <Content Include="inputs\day03.json">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="inputs\day04.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="LICENSE" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
@@ -56,6 +59,9 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="solutions\day03.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="solutions\day04.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="solutions\index.ts">
