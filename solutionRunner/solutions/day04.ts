@@ -89,10 +89,6 @@ class Day04 extends Solution {
         //    console.log(board.marks);
         //});
     }
-    private checkMatch(board: [][], bingoNumbers: []): boolean {
-
-        return false;
-    }
 
     public part1(): string {
         // Read bingo numbers
