@@ -48,6 +48,9 @@ rl.on('line', async (input) => {
             case (9):
                 solution = new solutions.Day09();
                 break;
+            case (10):
+                solution = new solutions.Day10();
+                break;
             default:
                 solution = undefined;
                 break;
