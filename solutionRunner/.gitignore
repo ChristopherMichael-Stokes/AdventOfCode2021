@@ -109,3 +109,5 @@ obj/
 bin/
 *.js
 *.map
+
+input.txt
