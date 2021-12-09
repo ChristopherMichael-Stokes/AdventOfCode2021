@@ -109,3 +109,4 @@ obj/
 bin/
 *.js
 *.map
+/inputCleaner/input.txt
