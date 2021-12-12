@@ -22,7 +22,6 @@ class Day12 extends Solution {
 
         // Write connections
         connections.forEach(connection => {
-            console.log(connection)
             const start = this.enumerations.get(connection[0]);
             const end = this.enumerations.get(connection[1]);
             //@ts-ignore -- Fuck typescript
@@ -30,8 +29,8 @@ class Day12 extends Solution {
             //@ts-ignore
             this.graph[end][start] = 1;
         });
-        this.graph.forEach(row => console.log(row.toString()))
-        console.log(this.locations);
+        //this.graph.forEach(row => console.log(row.toString()))
+        //console.log(this.locations);
     }
 
     public part1(): string {
@@ -98,39 +97,36 @@ class Day12 extends Solution {
             if (head === undefined) {
                 throw new Error('Fuck typescript');
             }
+            const bigCave = this.bigCaves[head.node];
 
             // Add new rules to allow single small cave to be seen twice
             if (head.node === end) {
                 ++routes;
-                console.log(head.chain.map(n => this.locations[n]).join(',')+',end');
+                //console.log(head.chain.map(n => this.locations[n]).join(',') + ',end');
                 continue;
             }
 
+            let visits = 0;
+            head.chain.forEach(x => {
+                if (x === head.node) {
+                    ++visits;
+                }
+            });
             // Issue -> we are breaking too early
-            if (!this.bigCaves[head.node]) {
-                // If there is no set littleBigCave
-                if (head.node != start && head.littleBigCave === -1) {
-                    // BUg ^ we always set littleBig cave to first cave visited
-                    head.littleBigCave = head.node;
-                }
+            //if (!bigCave && head.chain.includes(head.node)) {
+            //    // If there is no set littleBigCave
+            //    continue;
+            //    // BUg ^ we always set littleBig cave to first cave visited
 
-
-
-                // If we are in the littleBigCave
-                if (head.littleBigCave === head.node) {
-                    let visits = 0;
-                    head.chain.forEach(x => {
-                        if (x === head.node) {
-                            ++visits;
-                        }
-                    });
-                    // Make sure we visit at most twice
-                    if (visits > 1) {
-                        continue;
-                    }
-                } else if (head.chain.includes(head.node)) {
-                    continue;
-                }
+            //} else
+            if (!bigCave && head.node != start && visits === 1 && head.littleBigCave === -1) {
+                head.littleBigCave = head.node;
+            } else if (!bigCave && head.node != start && visits >= 1 && head.littleBigCave != head.node) {
+                continue;
+            } else if (!bigCave && head.node != start && visits > 1) {
+                continue;
+            } else if (head.node === start && head.chain.includes(start)) {
+                continue;
             }
 
             // Find all other connections
