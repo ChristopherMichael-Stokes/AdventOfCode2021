@@ -69,8 +69,10 @@ rl.on('line', async (input) => {
             console.log(`Solutions for day ${problem} have not been implemented`);
         } else {
             console.log(`Day ${problem} solution:`);
+            console.time(`runtime`);
             console.log(`Part 1: ${solution.part1()}`);
             console.log(`Part 2: ${solution.part2()}`);
+            console.timeEnd(`runtime`);
         }
     }
 
